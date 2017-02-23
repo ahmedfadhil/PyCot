@@ -1,0 +1,22 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PyCot</title>
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'polls/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+</head>
+<body>
+{% include 'polls/header.html' %}
+<hr>
+<div class="jumbotron">
+    <div class="container">
+        {% block main_content %}
+        {% endblock %}
+    </div>
+</div>
+{% include 'polls/footer.html' %}
+</body>
+</html>
